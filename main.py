@@ -51,7 +51,7 @@ for account in accounts.data:
 btc_prices = []
 btc_max = 0.0
 while True:
-	sleep(60)
+	sleep(30)
 	btc_account.refresh()
 	
 	# Get price
@@ -60,7 +60,7 @@ while True:
 	btc_prices.append(btc_price)
 	
 	# Purge list
-	if len(btc_prices) > BTC_BURST_MINUTES:
+	if len(btc_prices) > BTC_BURST_MINUTES * 2:
 		btc_prices.pop(0)
 	
 	# Set max price

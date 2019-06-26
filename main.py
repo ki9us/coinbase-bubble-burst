@@ -7,12 +7,6 @@
 # Sells crypto when the bubble bursts
 # 
 
-# This is the amount the price must drop to be considered a burst
-BTC_BURST_AMOUNT = 1000.0
-# This is how much time the price has to drop that far
-BTC_BURST_MINUTES = 60 * 24
-# For example, a drop of $1000 in 3 days is considered a burst
-
 
 # Imports
 import json
@@ -21,10 +15,12 @@ from time import sleep
 from dotenv import load_dotenv
 from coinbase.wallet.client import Client
 
-# Load API credentials
+# Load environment constants
 load_dotenv()
 API_KEY = getenv("API_KEY")
 API_SECRET = getenv("API_SECRET")
+BTC_BURST_AMOUNT = getenv("BTC_BURST_AMOUNT")
+BTC_BURST_MINUTES = getenv("BTC_BURST_MINUTES")
 
 # Authenticate with Coinbase
 client = Client(API_KEY, API_SECRET)

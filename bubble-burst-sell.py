@@ -23,3 +23,15 @@ API_SECRET = getenv("API_SECRET")
 client = Client(API_KEY, API_SECRET)
 user = client.get_current_user()
 print("Logged into Coinbase as {}".format(user.name))
+
+# Get accounts
+# (assuming only one btc, eth, and usd account exists)
+accounts = client.get_accounts()
+for account in accounts.data:
+	print()
+	if account.currency == "USD":
+		usd_account = account
+	elif account.currency == "BTC":
+		btc_account = account
+	elif account.currency == "ETH":
+		eth_account = account

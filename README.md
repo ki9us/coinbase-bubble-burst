@@ -10,10 +10,12 @@ I take no responsibility for how you use this script.  I'm not even sure that it
 Create environment and install dependencies
 
 ```
+git clone https://github.com/keith24/coinbase-bubble-burst.git
+cd coinbase-bubble-burst
 python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
-mv .env-sample .env
+cp .env-sample .env
 ```
 
 The edit `.env` with your account's API data from [www.coinbase.com/settings/api](https://www.coinbase.com/settings/api).  

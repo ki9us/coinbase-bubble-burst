@@ -51,7 +51,8 @@ for account in accounts.data:
 btc_prices = []
 btc_max = 0.0
 while True:
-	sleep(60)
+	sleep(5)
+	btc_account.refresh()
 	
 	# Get price
 	btc_price = float(client.get_spot_price(currency_pair = 'BTC-USD').amount)
@@ -70,7 +71,6 @@ while True:
 	# Check for bubble burst
 	if btc_price < btc_max - BTC_BURST:
 		# SELL! 
-		accounts.refresh()
 		print("BURST!  Price dropped from ${} to ${}!  Selling all {} BTC now!".format(btc_max, btc_price, account.balance.amount))
 		client.sell(
 			btc_account.id, 
@@ -78,3 +78,5 @@ while True:
 			currency="BTC",
 			payment_method=payout_method
 		)
+	else: 
+		print("Hodling {} BTC worth ${}...".format(account.balance.amount, account.native_balance.amount))

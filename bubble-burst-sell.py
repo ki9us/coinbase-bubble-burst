@@ -8,9 +8,9 @@
 # 
 
 # This is the amount the price must drop to be considered a burst
-BTC_BURST = 1000.0
+BTC_BURST_AMOUNT = 1000.0
 # This is how much time the price has to drop that far
-BTC_BURST_MINUTES = 60 * 24 * 3
+BTC_BURST_MINUTES = 60 * 24
 # For example, a drop of $1000 in 3 days is considered a burst
 
 
@@ -69,7 +69,7 @@ while True:
 		print("New maximum BTC price: ${}!".format(btc_max))
 	
 	# Check for bubble burst
-	if btc_price < btc_max - BTC_BURST:
+	if btc_price < btc_max - BTC_BURST_AMOUNT:
 		# SELL! 
 		print("BURST!  Price dropped from ${} to ${}!  Selling all {} BTC now!".format(btc_max, btc_price, account.balance.amount))
 		client.sell(
@@ -78,5 +78,6 @@ while True:
 			currency="BTC",
 			payment_method=payout_method
 		)
+		break
 	else: 
 		print("Hodling {} BTC worth ${}...".format(account.balance.amount, account.native_balance.amount))

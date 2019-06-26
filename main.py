@@ -51,7 +51,7 @@ for account in accounts.data:
 btc_prices = []
 btc_max = 0.0
 while True:
-	sleep(5)
+	sleep(60)
 	btc_account.refresh()
 	
 	# Get price

@@ -1,11 +1,10 @@
 #!/usr/bin/env python
-# bubble-burst-sell.py
+# main.py
 # 
 # Bubble Burst Crypto Seller
 # Keith Irwin 2019
 # 
 # Sells crypto when the bubble bursts
-# 
 
 
 # Imports

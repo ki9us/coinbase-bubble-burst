@@ -1,4 +1,4 @@
-# Coinbase Bubble Burster Seller
+# Coinbase Bubble Burst Seller
 ###### Keith Irwin 2019
 
 A script to sell crypto assets when the bubble bursts.  

@@ -10,7 +10,7 @@
 # This is the amount the price must drop to be considered a burst
 BTC_BURST = 1000.0
 # This is how much time the price has to drop that far
-BTC_BURST_MINTUES = 60 * 24 * 3
+BTC_BURST_MINUTES = 60 * 24 * 3
 # For example, a drop of $1000 in 3 days is considered a burst
 
 

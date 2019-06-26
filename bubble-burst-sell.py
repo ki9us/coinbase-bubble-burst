@@ -59,7 +59,7 @@ while True:
 	btc_prices.append(btc_price)
 	
 	# Purge list
-	if btc_prices.length > BTC_BURST_MINUTES:
+	if len(btc_prices) > BTC_BURST_MINUTES:
 		btc_prices.pop(0)
 	
 	# Set max price

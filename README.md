@@ -20,6 +20,6 @@ The edit `.env` with your account's API data from [www.coinbase.com/settings/api
 
 ## Usage
 
-Edit `BTC_BURST_AMOUNT` and `BTC_BURST_MINUTES` in bubble-burst-sell.py.  The script will sell all your BTC when the price drops an amount of `BTC_BURST_AMOUNT` within `BTC_BURST_MINUTES`.  
+Edit `BTC_BURST_AMOUNT` and `BTC_BURST_MINUTES` in `main.py`.  The script will sell all your BTC when the price drops an amount of `BTC_BURST_AMOUNT` within `BTC_BURST_MINUTES`.  
 
-Then simply run `./bubble-burst-sell.py`.  It will run until the bubble bursts, then sell all your assets and quit.  
+Then simply run `./main.py`.  It will run until the bubble bursts, then sell all your assets and quit.  

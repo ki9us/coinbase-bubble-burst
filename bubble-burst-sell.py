@@ -7,3 +7,4 @@
 # Sells crypto when the bubble bursts
 # 
 
+import coinbase
